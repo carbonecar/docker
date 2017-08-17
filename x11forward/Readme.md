@@ -10,7 +10,12 @@ docker build -t tagname .
 
  #### Explanation
  -t tagname : where tagname is the name of the tag for the docker image.
- -d run in deatached mode
+
+ -d run in deatached mode.
+
  --rm makes the container ephemeral, this means that when you close the app, the container removes.
+
  -e create an enviroment variable named DISPLAY.
- --name the name of the container 
+
+ --name the name of the container.
+ 
