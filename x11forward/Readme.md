@@ -2,11 +2,19 @@
 ## Host configuration
 Install xming https://sourceforge.net/projects/xming/
 ## Build
-docker build -t tagname .
+    docker build -t tagname .
+
+ej:
+
+    docker build -t x11forward
 
 ## Run in windows 10
- docker run -d -P --rm -e DISPLAY="iphost:0" --name x11test tagname  xeyes
+    docker run -d -P --rm -e DISPLAY="iphost:0" --name x11test tagname  xeyes
 
+
+ej:
+
+    docker run -d -P --rm -e DISPALY="iphost:0" --name x11test x11forward xeyes
 
  #### Explanation
  -t tagname : where tagname is the name of the tag for the docker image.
@@ -21,6 +29,7 @@ docker build -t tagname .
 
 ## Run in mac
 Copy in .bash_profile
+
     ip=$(ifconfig en0 | grep inet | awk '$1=="inet" {print $2}')
 
 give access to this ip
