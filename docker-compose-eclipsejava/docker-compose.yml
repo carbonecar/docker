@@ -1,0 +1,29 @@
+java:
+  image: cogniteev/oracle-java:java7
+  volumes:
+    - /usr/lib/jvm/java-7-oracle
+jboss423:
+  image: carbonecar/jboss423_ga
+  volumes:
+    - /jboss-4.2.3.GA
+  volumes_from:
+    - java
+maven:
+  image: cwahl/jdev-maven
+  volumes:
+    - /apache-maven
+
+
+eclipse:
+  build: eclipsejee-mars
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./eclipse-data/workspace:/workspace
+  volumes_from:
+    - java
+    - jboss423
+    - maven
+  environment:
+    - DISPLAY
+  ports:
+    - 8080
