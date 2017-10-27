@@ -1,0 +1,48 @@
+java:
+  image: frolvlad/alpine-oraclejdk8
+  volumes:
+    - /usr/lib/jvm/java-8-oracle
+java_7:
+  image: cogniteev/oracle-java:java7
+  volumes:
+    - /usr/lib/jvm/java-7-oracle
+jboss423:
+  image: carbonecar/jboss423_ga
+  volumes:
+    - /jboss-4.2.3.GA
+  volumes_from:
+    - java
+wmq:
+  image: ibmcom/mq
+  volumes:
+    - ./data/wmq:/mnt/mq
+  ports:
+    - 1414:1414
+    - 9443:9443
+  environment:
+    - LICENSE=accept
+    - MQ_QMGR_NAME=QM1
+
+maven:
+  image: cwahl/jdev-maven
+  volumes:
+    - /apache-maven
+
+
+eclipse:
+  build: eclipsejee-mars
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./eclipse-data/workspace:/workspace
+    - ./jboss-4.3-desa:/jboss-4.3-desa
+    - ./jboss-eap/jboss-eap-7.0:/jboss-eap
+  volumes_from:
+    - java
+    - java_7
+    - jboss423
+    - maven
+  environment:
+    - DISPLAY
+  ports:
+    - 8080:8080
+    - 9990:9990
