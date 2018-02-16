@@ -1,0 +1,5 @@
+docker-mvn-java/data/*
+docker-mvn-java/eclipse-container-data/subversion_conf/*.*
+docker-mvn-java/eclipse-data/workspace/*
+docker-mvn-java/jboss-4.3-desa
+docker-mvn-java/jboss-eap
