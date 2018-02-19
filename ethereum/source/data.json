@@ -1,0 +1,14 @@
+{
+    "/api/EmployeeInfoAPI": {
+        "get": {
+            "employees": [
+                {"id":1,"name": "Steves"}
+            ]
+        },
+        "post": {
+            "data": [
+                {"id":1,"name": "Steve French"}
+            ]
+        }
+    }
+}
