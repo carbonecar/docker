@@ -1,5 +1,5 @@
 https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2
-
+https://github.com/strongloop/strong-soap
 docker run -it -p 8545:8545  -p 30303:30303 -p 3000:3000 -v $pwd/source:/source --name ethereum_env ethereum_environment:latest /bin/bash
 
 
