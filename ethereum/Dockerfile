@@ -11,3 +11,6 @@ run apt-get install -y build-essential git software-properties-common \
 && add-apt-repository -y ppa:ethereum/ethereum \
 && apt update \
 && apt-get install -y ethereum
+
+run npm install -g truffle \
+&& npm install -g webpack
