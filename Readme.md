@@ -1,5 +1,5 @@
 # Docker images for testing
 
-## Know problems
+## Known problems
 ### Windows
 Using xming you must start the server with "no access control" checkbox enabledl
