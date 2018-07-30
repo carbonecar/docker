@@ -32,7 +32,7 @@ maven:
 eclipse:
   build: eclipsejee-mars
   volumes:
-    - /tmp/.X11-unix:/tmp/.X11-unix
+    # - /tmp/.X11-unix:/tmp/.X11-unix
     - ./eclipse-data/workspace:/workspace
     - ./jboss-4.3-desa:/jboss-4.3-desa
     #- ./jboss-4.2.3.GA:/jboss-4.2.3-local

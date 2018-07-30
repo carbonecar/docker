@@ -18,7 +18,7 @@ WORKDIR /home/javadev
 RUN ln -s /workspace workspace
 RUN ln -s /workspace/.m2 .m2
 
-RUN wget http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/mars/2/eclipse-jee-mars-2-linux-gtk-x86_64.tar.gz -O /tmp/eclipse.tar.gz -q && \
+RUN wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/2/eclipse-jee-mars-2-linux-gtk-x86_64.tar.gz -O /tmp/eclipse.tar.gz -q && \
     echo 'Installing eclipse' && \
     mkdir eclipse-bin && \
     tar -xf /tmp/eclipse.tar.gz -C eclipse-bin && \

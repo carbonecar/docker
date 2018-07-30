@@ -1,9 +1,11 @@
 ## JbossTools
+<a href="
+https://stackoverflow.com/questions/31245959/how-to-add-jboss-server-in-eclipse">Install jboss plugin server</a>
 
-https://stackoverflow.com/questions/31245959/how-to-add-jboss-server-in-eclipse
-
+### Importar sertificados de seguridad
+The default password for cacerts keystore is 'changeit'
 ````
-keytool -import -alias nexus-osde -keystore $JAVA_HOME/jre/lib/security/cacerts -file /workspace/repositorio.cer
+keytool -import -alias nexus-osde -keystore $JAVA_HOME/jre/lib/security/cacerts -file /workspace/repositorio.cer -storepass changeit
 ```
 
 ### Buildear el proyecto
