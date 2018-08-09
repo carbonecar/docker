@@ -37,3 +37,7 @@ Luego que este levanta se puede acceder al entorno ejecutando:
 ```
 docker exec -it dockermvnjava_console_1 /bin/bash
 ```
+
+
+### Errores comunes:
+En caso de encontrar un error del tipo "file not found" o "resource is busy" se recomienda compilar desde el root (centrovalidador)
