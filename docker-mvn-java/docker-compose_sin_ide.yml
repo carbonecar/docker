@@ -32,7 +32,7 @@ maven:
 db:
   build: ./db2
   ports:
-    - "50000:50000"     
+    - "50000:50000"
   environment:
       LICENSE: accept
       DB2INST1_PASSWORD: thisisthepwd
