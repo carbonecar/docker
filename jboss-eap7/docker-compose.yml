@@ -1,0 +1,23 @@
+java:
+  image: frolvlad/alpine-oraclejdk8
+  volumes:
+    - /usr/lib/jvm/java-8-oracle
+maven:
+  image: cwahl/jdev-maven
+  volumes:
+    - /apache-maven
+
+eclipse:
+  build: eclipsejee-mars
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - ./jboss-eap:/jboss-eap
+    - ./eclipse-data/workspace:/workspace
+  volumes_from:
+    - java
+    - maven
+  environment:
+    - DISPLAY
+  ports:
+    - 8080:8080
+    - 9990:9990

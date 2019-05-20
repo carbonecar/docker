@@ -1,0 +1,12 @@
+{
+  "name": "project",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.x.x"
+  },
+  "devDependencies": {
+    "nodemon": "*"
+  }
+}
