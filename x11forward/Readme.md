@@ -27,6 +27,11 @@ ej:
 
  --name the name of the container.
 
+## Run on ubuntu
+open terminal and execute xhost
+
+    docker run -it -P -v /tmp/.X11-unix:/tmp/.X11-unix -P --rm -e DISPLAY=$:0 --name x11test x11forward xeyes
+
 ## Run in mac
 Copy in .bash_profile
 
