@@ -6,7 +6,7 @@ Install xming https://sourceforge.net/projects/xming/
 
 ej:
 
-    docker build -t x11forward
+    docker build -t x11forward .
 
 ## Run in windows 10
     docker run -d -P --rm -e DISPLAY="iphost:0" --name x11test tagname  xeyes
